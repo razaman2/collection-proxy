@@ -1,0 +1,47 @@
+{
+    "name": "@razaman2/collection-proxy",
+    "version": "0.0.1",
+    "description": "an opinionated approach to reading and writing documents in firebase/firestore.",
+    "main": "dist/index.js",
+    "module": "dist/index.mjs",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "prepublishOnly": "npm run build",
+        "build": "tsup src/index.ts --format cjs,esm --dts",
+        "test": "cd tests && firebase emulators:start --project demo-app --only auth,firestore",
+        "lint": "tsc"
+    },
+    "keywords": [
+        "firestore",
+        "firestore-helper",
+        "firestore-proxy"
+    ],
+    "author": "razaman2",
+    "license": "MIT",
+    "dependencies": {
+        "@razaman2/data-manager": "^3.2.6",
+        "@razaman2/js-factory": "^1.2.5",
+        "@razaman2/object-manager": "^3.3.9"
+    },
+    "devDependencies": {
+        "@faker-js/faker": "^8.3.1",
+        "@razaman2/event-emitter": "^2.0.14",
+        "@razaman2/firestore-testing": "^0.0.1",
+        "firebase": "^10.7.1",
+        "firebase-admin": "^12.0.0",
+        "tsup": "^8.0.1",
+        "typescript": "^5.3.3",
+        "vitest": "^1.1.3",
+        "zod": "^3.22.4"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "files": [
+        "dist"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/razaman2/collection-proxy.git"
+    }
+}
