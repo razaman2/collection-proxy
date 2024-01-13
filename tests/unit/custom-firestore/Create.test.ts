@@ -1,7 +1,7 @@
 import "../../firebase-init-firestore";
 import {describe, afterEach, beforeEach, expect, it} from "vitest";
 import {Collection} from "../../../src";
-import {app, initializeTestApp} from "@razaman2/firestore-testing";
+import {app, initializeTestApp} from "@razaman2/collection-testing";
 import {faker} from "@faker-js/faker";
 
 describe("Create Documents", () => {

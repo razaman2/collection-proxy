@@ -1,6 +1,6 @@
 import "../firebase";
 import {describe, it, expect} from "vitest";
-import {Collection} from "@razaman2/firestore-proxy";
+import {Collection} from "@razaman2/collection-proxy";
 
 describe("relationships", () => {
     it("should ", async () => {

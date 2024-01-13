@@ -1,6 +1,6 @@
 import {describe, it, expect, beforeEach, afterEach} from "vitest";
 import {initializeFirestoreProxy} from "../firebase-init-firestore";
-import {initializeTestApp, getCollectionProxy, app} from "@razaman2/firestore-testing";
+import {initializeTestApp, getCollectionProxy, app} from "@razaman2/collection-testing";
 
 describe("test document creation", () => {
     beforeEach(async () => {

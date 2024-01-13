@@ -1,5 +1,5 @@
 import {describe, it, expect, beforeEach, afterEach} from "vitest";
-import {initializeTestApp, getCollectionProxy, app} from "@razaman2/firestore-proxy-testing";
+import {initializeTestApp, getCollectionProxy, app} from "@razaman2/collection-proxy-testing";
 import faker from "faker";
 
 describe("test document creation", () => {

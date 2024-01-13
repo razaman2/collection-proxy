@@ -1,7 +1,7 @@
 import "../../firebase-init-firestore";
 import {describe, it, expect, beforeEach, afterEach} from "vitest";
 import {serverTimestamp, getFirestore, writeBatch} from "firebase/firestore";
-import {initializeTestApp, app} from "@razaman2/firestore-testing";
+import {initializeTestApp, app} from "@razaman2/collection-testing";
 import {Collection} from "../../../src";
 
 describe("Read Data", () => {

@@ -1,6 +1,6 @@
 import {describe, it, expect, beforeEach, afterEach} from "vitest";
 import {initializeFirestoreProxy} from "../firebase-init-firestore";
-import {initializeTestApp, getCollectionProxy, getAdminContext, getDefaultContext, assertFails, assertSucceeds, app} from "@razaman2/firestore-testing";
+import {initializeTestApp, getCollectionProxy, getAdminContext, getDefaultContext, assertFails, assertSucceeds, app} from "@razaman2/collection-testing";
 import {Collection, Updates} from "../../src/index";
 import faker from "faker";
 import {collection} from "firebase/firestore";

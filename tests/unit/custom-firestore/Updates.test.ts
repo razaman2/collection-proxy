@@ -2,7 +2,7 @@ import "../../firebase-init-firestore";
 import {describe, it, expect, beforeEach, afterEach} from "vitest";
 import {Collection, Updates} from "../../../src";
 import {arrayRemove, arrayUnion, getFirestore, writeBatch, deleteField} from "firebase/firestore";
-import {initializeTestApp, app} from "@razaman2/firestore-testing";
+import {initializeTestApp, app} from "@razaman2/collection-testing";
 import {faker} from "@faker-js/faker";
 
 describe("array updates", () => {

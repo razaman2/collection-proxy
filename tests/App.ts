@@ -1,6 +1,6 @@
 import "./firebase-init-firestore";
 import {Collection} from "../src";
-import {initializeTestApp, getAdminContext} from "@razaman2/firestore-testing";
+import {initializeTestApp, getAdminContext} from "@razaman2/collection-testing";
 import {getAuth, createUserWithEmailAndPassword} from "firebase/auth";
 
 export default {

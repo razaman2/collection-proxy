@@ -1,7 +1,7 @@
 import {describe, it, expect, beforeEach, afterEach} from "vitest";
 import {Collection} from "../../src/index";
 import {initializeFirestoreProxy} from "../firebase-init-firestore";
-import {initializeTestApp, getDefaultContext, app} from "@razaman2/firestore-testing";
+import {initializeTestApp, getDefaultContext, app} from "@razaman2/collection-testing";
 import {getFirestore, doc, collection} from "firebase/firestore";
 
 describe("WriteData", () => {

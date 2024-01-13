@@ -1,6 +1,6 @@
 import "../../firebase-init-firestore";
 import {describe, it, expect, beforeEach, afterEach} from "vitest";
-import {initializeTestApp, app} from "@razaman2/firestore-testing";
+import {initializeTestApp, app} from "@razaman2/collection-testing";
 import {arrayUnion} from "firebase/firestore";
 import {Collection} from "../../../src";
 import {faker} from "@faker-js/faker";

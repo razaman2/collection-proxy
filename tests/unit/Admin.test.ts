@@ -2,7 +2,7 @@ import {describe, it, expect, beforeEach, afterEach} from "vitest";
 import Factory from "@razaman2/js-factory";
 import {Timestamp} from "firebase-admin/firestore";
 import {Collection, Updates, WriteTypes} from "../../src/index";
-import {initializeTestApp, getAdminContext, app} from "@razaman2/firestore-testing";
+import {initializeTestApp, getAdminContext, app} from "@razaman2/collection-testing";
 import "../firebase-init-firestore";
 
 describe("Admin", () => {

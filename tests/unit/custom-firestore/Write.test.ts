@@ -1,7 +1,7 @@
 import "../../firebase-init-firestore";
 import {describe, it, expect, beforeEach, afterEach} from "vitest";
 import {Collection} from "../../../src";
-import {initializeTestApp, getAdminContext, app} from "@razaman2/firestore-testing";
+import {initializeTestApp, getAdminContext, app} from "@razaman2/collection-testing";
 import {faker} from "@faker-js/faker";
 
 describe("test read", () => {

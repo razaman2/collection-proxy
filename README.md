@@ -1,15 +1,15 @@
-# @razaman2/firestore-proxy
+# @razaman2/collection-proxy
 
 A custom firestore client that provides a simple and consistent interface for interacting with the database.
 
 ## Install the dependencies
 
 ```bash
-npm install --save @razaman2/firestore-proxy
+npm install --save @razaman2/collection-proxy
 ```
 
 ```bash
-pnpm add @razaman2/firestore-proxy
+pnpm add @razaman2/collection-proxy
 ```
 
 <br/>
@@ -30,7 +30,7 @@ pnpm add @razaman2/firestore-proxy
     "id": "document-id"
 }
 ```
-1. The ```belongsTo``` is an array that stores all the document id's that have a relationship with the current 
+1. The ```belongsTo``` is an array that stores all the document id's that have a relationship with the current
    document. The convention is to list the document id followed by a space followed by the collection the document id is from. The relationship will always include the current document id.
 > A settings document with id 111, that belongs to a user with id 222, and a company with id 333, would look like this
 ```{belongsTo: ["111 settings", "222 users", "333 companies"]}```. This relationship is intended to be queried using the ```array-contains``` or the ```array-contains-any``` operators.
@@ -54,7 +54,7 @@ All you need to do to configure the namespaced api is to provide it with your fi
 ```javascript
 import firebase from "firebase/compat/app";
 import "firebase/compat/firestore";
-import {Collection} from "@razaman2/firestore-proxy";
+import {Collection} from "@razaman2/collection-proxy";
 
 firebase.initializeApp({projectId: "demo-app"});
 
@@ -68,11 +68,11 @@ Collection.proxy({
 ```
 
 #### <ins>Modular API</ins>
-Import the functions from the firestore library and provide them to the collection config. You can provide only the functions that are needed for the operation you are trying to perform. 
+Import the functions from the firestore library and provide them to the collection config. You can provide only the functions that are needed for the operation you are trying to perform.
 ```javascript
 import {initializeApp} from "firebase/app";
 import {getFirestore, collection, doc, getDoc, getDocs, collectionGroup, onSnapshot, setDoc, updateDoc, deleteDoc, deleteField, arrayUnion, serverTimestamp, writeBatch} from "firebase/firestore";
-import {Collection} from "@razaman2/firestore-proxy";
+import {Collection} from "@razaman2/collection-proxy";
 
 initializeApp({projectId: "demo-app"});
 
@@ -103,7 +103,7 @@ Collection.proxy({
 
     // when deleting documents
     deleteDoc,
-   
+
     // when you want to delete undefined document fields
     deleteField,
 
@@ -249,7 +249,7 @@ await Collection.proxy().setPath("tests").setDoc("123").delete();
 #### <ins>Audit trail</ins>
 <i>you can attach built in **audit trail** to ```create```, ```update``` and ```delete``` operations</i>
 ```javascript
-import {Update} from "@razaman2/firestore-proxy";
+import {Update} from "@razaman2/collection-proxy";
 
 // audit trail any create, update or delete operations on the proxy
 Collection.proxy("tests").onWrite({

@@ -3,7 +3,7 @@ import {describe, it, expect, beforeEach, afterEach} from "vitest";
 import {Collection} from "../../../src";
 import {doc} from "firebase/firestore";
 import {faker} from "@faker-js/faker";
-import {app, initializeTestApp} from "@razaman2/firestore-testing";
+import {app, initializeTestApp} from "@razaman2/collection-testing";
 
 describe("Identifier", () => {
     beforeEach(async () => {
